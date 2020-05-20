@@ -1,0 +1,92 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <input 
+        type="url" 
+        name="avatar_url" 
+        placeholder="http://"
+        value="{{ teacher.avatar_url }}"
+    >
+</div>
+
+<div class="item">
+    <div>Nome</div>
+    <input 
+        type="text"
+        name="name"
+        placeholder="Nome completo"
+        value="{{ teacher.name }}"
+    >
+</div>
+
+<div class="item">
+    <div>Idade</div>
+    <input 
+        type="date" 
+        name="birth"
+        value="{{ teacher.birth }}"
+    >
+</div>
+
+<div class="item">
+    <div>Grau de Escolaridade</div>
+    <select name="degree">
+        <option 
+            value="Ensino Médio Completo" 
+            {% if teacher.degree == 'Ensino Médio Completo' %} 
+                selected
+            {% endif %}>Ensino Médio Completo
+        </option>
+        <option 
+            value="Ensino Superior Completo" 
+            {% if teacher.degree == 'Ensino Superior Completo' %}
+                selected
+            {% endif %}>Ensino Superior Completo
+        </option>
+        <option 
+            value="Mestrado" 
+            {% if teacher.degree == 'Mestrado' %}
+                selected
+            {% endif %}>Mestrado
+        </option>
+        <option 
+            value="Doutorado" 
+            {% if teacher.degree == 'Doutorado' %}
+                selected
+            {% endif %}>Doutorado
+        </option>
+    </select>
+</div>
+
+<div class="item">
+    <div>Tipo de Aula</div>
+    <span>
+        <input
+        type="radio" 
+        name="class_type" 
+        value="Presencial" 
+        {% if teacher.class_type == 'Presencial' %}
+            checked
+        {% endif %}>Presencial
+    </span>
+    <span>
+        <input 
+        type="radio" 
+        name="class_type" 
+        value="À Distância" 
+        {% if teacher.class_type == 'À Distância' %}
+            checked
+        {% endif %}>À Distância
+    </span>
+</div>
+
+<div class="item">
+    <div>Acompanhamento</div>
+    <input 
+        type="text" 
+        name="services"
+        placeholder="Áreas de atuação"
+        value="{{ teacher.services }}"
+    >
+</div>
+
+<button type="submit">Salvar</button>

@@ -140,14 +140,12 @@ h3,
     text-transform: capitalize;
 }
 
-.item span,
 .item span {
     display: inline-block;
     padding: 4px 12px;
     background-color: var(--primary-yellow);
     border-radius: 16px;
-    margin-top: 4px;
-    margin-right: 8px;
+    margin: 4px 8px 4px 0;
     color: var(--rocket-color);
     font-size: 16px;
 }
@@ -225,7 +223,7 @@ a.button {
 }
 
 .table-container thead tr th {
-    text-align: left;
+    text-align: center;
     font-size: 14px;
     color: #777;
     text-transform: uppercase;
@@ -263,6 +261,18 @@ tbody tr td:first-child span {
     
 }
 
+tbody tr td:nth-child(2) span {
+    background-color: var(--primary-yellow);
+    color: var(--rocket-color);
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 4px 4px 0 0;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+/* === BUTTON VER === */
+
 tbody tr td:last-child a,
 .create a {
     background-color: var(--rocket-color);
@@ -282,6 +292,21 @@ tbody tr td:last-child a,
 .students-table table tr,
 .students-table table tr td::after {
     display: grid;
-    grid-template-columns: 30% 30% 20% 15%;
+    grid-template-columns: 25% 35% 25% 15%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.students-table tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    align-items: center;
+}
+
+.students-table th, td {
+    padding: 24px;
+    border-bottom: 2px solid #d9d9d9;
+    font-size: 16px;
+    color: black;
     text-align: center;
 }

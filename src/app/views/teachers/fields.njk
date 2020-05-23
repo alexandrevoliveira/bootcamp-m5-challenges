@@ -22,35 +22,35 @@
     <div>Idade</div>
     <input 
         type="date" 
-        name="birth"
-        value="{{ teacher.birth }}"
+        name="birth_date"
+        value="{{ teacher.birth_date }}"
     >
 </div>
 
 <div class="item">
     <div>Grau de Escolaridade</div>
-    <select name="degree">
+    <select name="education_level">
         <option 
             value="Ensino Médio Completo" 
-            {% if teacher.degree == 'Ensino Médio Completo' %} 
+            {% if teacher.education_level == 'Ensino Médio Completo' %} 
                 selected
             {% endif %}>Ensino Médio Completo
         </option>
         <option 
             value="Ensino Superior Completo" 
-            {% if teacher.degree == 'Ensino Superior Completo' %}
+            {% if teacher.education_level == 'Ensino Superior Completo' %}
                 selected
             {% endif %}>Ensino Superior Completo
         </option>
         <option 
             value="Mestrado" 
-            {% if teacher.degree == 'Mestrado' %}
+            {% if teacher.education_level == 'Mestrado' %}
                 selected
             {% endif %}>Mestrado
         </option>
         <option 
             value="Doutorado" 
-            {% if teacher.degree == 'Doutorado' %}
+            {% if teacher.education_level == 'Doutorado' %}
                 selected
             {% endif %}>Doutorado
         </option>
@@ -80,12 +80,12 @@
 </div>
 
 <div class="item">
-    <div>Acompanhamento</div>
+    <div>Disciplinas</div>
     <input 
         type="text" 
-        name="services"
-        placeholder="Áreas de atuação"
-        value="{{ teacher.services }}"
+        name="subjects_taught"
+        placeholder="Disciplinas ensinadas"
+        value="{{ teacher.subjects_taught }}"
     >
 </div>
 

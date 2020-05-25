@@ -3,8 +3,10 @@ const { date } = require('../../lib/utils')
 
 module.exports = {
     all(callback) {
-        db.query(`SELECT *
+        db.query(`SELECT students.*, teachers.name AS teacher_name
                 FROM students
+                LEFT JOIN teachers ON (students.teacher_id = teachers.id)
+                WHERE students.id IS NOT NULL
                 ORDER BY name ASC`, function(err, results) {
                     if(err) throw `Database error! ${err}`
 

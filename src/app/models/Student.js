@@ -3,7 +3,7 @@ const { date } = require('../../lib/utils')
 
 module.exports = {
     all(callback) {
-        db.query(`SELECT students.*, teachers.name AS teacher_name
+        db.query(`SELECT students.*, teachers.name AS teacher_name, teachers.id AS teacher_id
                 FROM students
                 LEFT JOIN teachers ON (students.teacher_id = teachers.id)
                 WHERE students.id IS NOT NULL

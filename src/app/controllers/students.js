@@ -1,9 +1,14 @@
-const { age, date } = require('../../lib/utils')
+const { age, date, grade } = require('../../lib/utils')
 const Student = require('../models/Student')
 
 module.exports = {
     index(req, res) {
         Student.all(function(students) {
+
+            for(let student of students) {
+                student.school_year = grade(student.school_year)
+            }
+            
             return res.render("students/index", { students })
         })
     },

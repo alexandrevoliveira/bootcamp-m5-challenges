@@ -336,10 +336,6 @@ tbody tr td:last-child a,
     bottom: -4px;
 }
 
-.students-table tbody tr:nth-child(4) td:nth-child(4) a::after {
-    bottom: -24px;
-}
-
 .students-table tbody td:nth-child(4) a:hover::after {
     width: 100%;
     transition: width ease-in-out 700ms ;

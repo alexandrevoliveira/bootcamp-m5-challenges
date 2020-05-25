@@ -319,6 +319,7 @@ tbody tr td:last-child a,
 .students-table td:nth-child(4) a{
     position: relative;
     text-decoration: none;
+    color: black;
 }
 
 .students-table tbody td:nth-child(4) a:hover {

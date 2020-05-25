@@ -68,9 +68,10 @@ header {
 
 .card {
     background-color: white;
-    width: 800px;
+    width: 960px;
     min-height: 400px;
     margin: 50px auto;
+    border-radius: 16px;
 
     /* grid */
     display: grid;
@@ -248,6 +249,9 @@ tbody tr td:first-child {
     display: grid;
     grid-template-columns: 72px 120px;
     align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color:#145457;
 }
 
 tbody tr td:first-child span {
@@ -264,7 +268,7 @@ tbody tr td:first-child span {
 tbody tr td:nth-child(2) span {
     background-color: var(--primary-yellow);
     color: var(--rocket-color);
-    font-size: 12px;
+    font-size: 16px;
     padding: 4px 8px;
     margin: 4px 4px 0 0;
     display: inline-block;
@@ -292,7 +296,7 @@ tbody tr td:last-child a,
 
 .students-table table tr td::after {
     display: grid;
-    grid-template-columns: 25% 35% 25% 15%;
+    grid-template-columns: 25% 30% 10% 20% 15%;
     align-items: center;
     box-sizing: border-box;
 }
@@ -309,4 +313,33 @@ tbody tr td:last-child a,
     font-size: 16px;
     color: black;
     text-align: center;
+
+}
+
+.students-table td:nth-child(4) a{
+    position: relative;
+    text-decoration: none;
+}
+
+.students-table tbody td:nth-child(4) a:hover {
+    color: var(--rocket-color);
+}
+
+.students-table tbody td:nth-child(4) a::after {
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: var(--rocket-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.students-table tbody tr:nth-child(4) td:nth-child(4) a::after {
+    bottom: -24px;
+}
+
+.students-table tbody td:nth-child(4) a:hover::after {
+    width: 100%;
+    transition: width ease-in-out 700ms ;
 }

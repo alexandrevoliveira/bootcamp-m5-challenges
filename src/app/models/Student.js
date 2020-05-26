@@ -6,7 +6,6 @@ module.exports = {
         db.query(`SELECT students.*, teachers.name AS teacher_name, teachers.id AS teacher_id
                 FROM students
                 LEFT JOIN teachers ON (students.teacher_id = teachers.id)
-                WHERE students.id IS NOT NULL
                 ORDER BY name ASC`, function(err, results) {
                     if(err) throw `Database error! ${err}`
 

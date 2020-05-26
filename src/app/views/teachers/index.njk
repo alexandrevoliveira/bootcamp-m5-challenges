@@ -9,8 +9,17 @@
 
 <div class="card table-container">
 
-    <div class="create">
-        <a href="/teachers/create">Criar</a>
+    <div class="header">
+        <a class="button" href="/teachers/create">Criar</a>
+        <form action="/teachers" method="GET">
+            <input 
+                type="text"
+                name="filter" 
+                value="{{filter}}"
+                placeholder="Nome ou Acompanhamento"
+            >
+            <button type="submit">Filtrar</button>
+        </form>
     </div>
 
     <table width="100%">

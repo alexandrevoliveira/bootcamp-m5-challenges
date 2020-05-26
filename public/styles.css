@@ -186,15 +186,13 @@ form[class="card"] span {
 
 button[type="submit"],
 a.button {
-    width: 50%;
+    width: 100%;
     margin-top: 32px;
-    padding: 8px;
+    padding: 8px 32px;
     font-size: 18px;
-    border-radius: 16px;
+    border-radius: 4px;
     background-color: var(--rocket-color);
     color: white;
-    position: relative;
-    left: 25%;
 }
 
 a.button {
@@ -339,4 +337,37 @@ tbody tr td:last-child a,
 .students-table tbody td:nth-child(4) a:hover::after {
     width: 100%;
     transition: width ease-in-out 700ms ;
+}
+
+
+/* === FILTER TEACHERS/INDEX.NJK === */
+
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.table-container .header a {
+    margin: 0;
+    width: 120px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+}
+
+.table-container .header form input {
+    border: 2px solid #eee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.table-container .header form button {
+    margin: 0;
 }

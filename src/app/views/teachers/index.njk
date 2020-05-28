@@ -51,7 +51,13 @@
             {% endfor %}
         </tbody>
     
-    </table>    
+    </table>
+
+    <div class="pagination"
+        data-page={{pagination.page}}
+        data-totalpages={{pagination.totalPages}}
+        data-filter={{filter}}
+    ></div>
 
 </div>
 

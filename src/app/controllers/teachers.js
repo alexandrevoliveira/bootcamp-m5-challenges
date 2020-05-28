@@ -19,7 +19,13 @@ module.exports = {
                 for (let teacher of teachers) {
                     teacher.subjects_taught = teacher.subjects_taught.split(",")
                 }
-                return res.render("teachers/index", { teachers, filter })
+
+                const pagination = {
+                    page,
+                    totalPages: Math.ceil(teachers[0].total / limit)
+                }
+
+                return res.render("teachers/index", { teachers, filter, pagination })
             }
         }
 

@@ -31,22 +31,6 @@ module.exports = {
 
         Teacher.paginate(params)
 
-        // if (filter) {
-        //     Teacher.findBy(filter, function(teachers) {
-        //         for(let teacher of teachers) {
-        //             teacher.subjects_taught = teacher.subjects_taught.split(",")
-        //         }    
-        //         return res.render("teachers/index", { teachers, filter })
-        //     })
-        // } else {
-        //     Teacher.all(function(teachers) {
-        //         for(let teacher of teachers) {
-        //             teacher.subjects_taught = teacher.subjects_taught.split(",")
-        //         }    
-        //         return res.render("teachers/index", { teachers })
-        //     })
-        // }
-
     },
     create(req, res) {
         return res.render("teachers/create")

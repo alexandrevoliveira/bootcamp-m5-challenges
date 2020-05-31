@@ -9,8 +9,17 @@
 
 <div class="card table-container students-table">
 
-    <div class="create">
-        <a href="/students/create">Criar</a>
+    <div class="header">
+        <a class="button" href="/students/create">Criar</a>
+        <form action="/students" method="GET">
+            <input 
+                type="text" 
+                name="filter" 
+                value="{{filter}}"
+                placeholder="Nome ou Email"
+            >
+            <button type="submit">Filtrar</button>
+        </form>
     </div>
 
     <table width="100%">
@@ -40,7 +49,13 @@
             {% endfor %}
         </tbody>
     
-    </table>    
+    </table>
+
+    <div class="pagination"
+        data-page="{{pagination.page}}"
+        data-totalpages="{{pagination.totalPages}}"
+        data-filter="{{filter}}"
+    ></div>
 
 </div>
 
